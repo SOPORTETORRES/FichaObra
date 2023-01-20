@@ -1,0 +1,833 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{A37C5B74-98B3-42D8-BCC4-ACECA6D76BCB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Maqueta</RootNamespace>
+    <AssemblyName>Maqueta</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Maqueta.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Maqueta.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Calidad.aspx" />
+    <Content Include="CambioPrecioMasivo.aspx" />
+    <Content Include="CodigosParaFacturar.aspx" />
+    <Content Include="COF.aspx" />
+    <Content Include="Complementos\css\estilos.css" />
+    <Content Include="Complementos\css\menu.css" />
+    <Content Include="Complementos\css\theme-rtl.css" />
+    <Content Include="Complementos\css\theme-rtl.min.css" />
+    <Content Include="Complementos\css\theme.css" />
+    <Content Include="Complementos\css\theme.min.css" />
+    <Content Include="Complementos\css\user-rtl.css" />
+    <Content Include="Complementos\css\user-rtl.min.css" />
+    <Content Include="Complementos\css\user.css" />
+    <Content Include="Complementos\css\user.min.css" />
+    <Content Include="Complementos\echarts\active-users-report.js" />
+    <Content Include="Complementos\echarts\audience.js" />
+    <Content Include="Complementos\echarts\bandwidth-saved.js" />
+    <Content Include="Complementos\echarts\basic-echarts.js" />
+    <Content Include="Complementos\echarts\bounce-rate.js" />
+    <Content Include="Complementos\echarts\candle-chart.js" />
+    <Content Include="Complementos\echarts\closed-vs-goal.js" />
+    <Content Include="Complementos\echarts\crm-revenue.js" />
+    <Content Include="Complementos\echarts\deal-storage-funnel.js" />
+    <Content Include="Complementos\echarts\echarts-utils.js" />
+    <Content Include="Complementos\echarts\echarts.js" />
+    <Content Include="Complementos\echarts\examples\area-pieces-chart.js" />
+    <Content Include="Complementos\echarts\examples\bar-line-mixed-chart.js" />
+    <Content Include="Complementos\echarts\examples\bar-negative-chart.js" />
+    <Content Include="Complementos\echarts\examples\bar-race-chart.js" />
+    <Content Include="Complementos\echarts\examples\bar-series-chart.js" />
+    <Content Include="Complementos\echarts\examples\bar-stacked-chart.js" />
+    <Content Include="Complementos\echarts\examples\bar-timeline-chart.js" />
+    <Content Include="Complementos\echarts\examples\bar-waterfall-chart.js" />
+    <Content Include="Complementos\echarts\examples\basic-bar-chart.js" />
+    <Content Include="Complementos\echarts\examples\basic-candlestick-chart.js" />
+    <Content Include="Complementos\echarts\examples\basic-gauge-chart.js" />
+    <Content Include="Complementos\echarts\examples\basic-line-chart.js" />
+    <Content Include="Complementos\echarts\examples\bubble-chart.js" />
+    <Content Include="Complementos\echarts\examples\candle-stick-mixed-chart.js" />
+    <Content Include="Complementos\echarts\examples\doughnut-chart.js" />
+    <Content Include="Complementos\echarts\examples\doughnut-rounded-chart.js" />
+    <Content Include="Complementos\echarts\examples\dynamic-line-chart.js" />
+    <Content Include="Complementos\echarts\examples\gauge-grade-chart.js" />
+    <Content Include="Complementos\echarts\examples\gauge-multi-ring-chart.js" />
+    <Content Include="Complementos\echarts\examples\gauge-multi-title-chart.js" />
+    <Content Include="Complementos\echarts\examples\gauge-progress-chart.js" />
+    <Content Include="Complementos\echarts\examples\gauge-ring-chart.js" />
+    <Content Include="Complementos\echarts\examples\gradient-bar-chart.js" />
+    <Content Include="Complementos\echarts\examples\heatmap-chart.js" />
+    <Content Include="Complementos\echarts\examples\heatmap-single-series-chart.js" />
+    <Content Include="Complementos\echarts\examples\horizontal-bar-chart.js" />
+    <Content Include="Complementos\echarts\examples\line-area-chart.js" />
+    <Content Include="Complementos\echarts\examples\line-gradient-chart.js" />
+    <Content Include="Complementos\echarts\examples\line-log-chart.js" />
+    <Content Include="Complementos\echarts\examples\line-marker-chart.js" />
+    <Content Include="Complementos\echarts\examples\line-race-chart.js" />
+    <Content Include="Complementos\echarts\examples\line-share-dataset-chart.js" />
+    <Content Include="Complementos\echarts\examples\map-usa.js" />
+    <Content Include="Complementos\echarts\examples\pie-chart.js" />
+    <Content Include="Complementos\echarts\examples\pie-edge-align-chart.js" />
+    <Content Include="Complementos\echarts\examples\pie-label-align-chart.js" />
+    <Content Include="Complementos\echarts\examples\pie-multiple-chart.js" />
+    <Content Include="Complementos\echarts\examples\radar-chart.js" />
+    <Content Include="Complementos\echarts\examples\radar-customized-chart.js" />
+    <Content Include="Complementos\echarts\examples\radar-multiple-chart.js" />
+    <Content Include="Complementos\echarts\examples\scatter-basic-chart.js" />
+    <Content Include="Complementos\echarts\examples\scatter-quartet.js" />
+    <Content Include="Complementos\echarts\examples\scatter-single-axis-chart.js" />
+    <Content Include="Complementos\echarts\examples\stacked-area-chart.js" />
+    <Content Include="Complementos\echarts\examples\stacked-horizontal-bar-chart.js" />
+    <Content Include="Complementos\echarts\examples\stacked-line-chart.js" />
+    <Content Include="Complementos\echarts\examples\step-line-chart.js" />
+    <Content Include="Complementos\echarts\gross-revenue.js" />
+    <Content Include="Complementos\echarts\lead-conversion.js" />
+    <Content Include="Complementos\echarts\line-payment.js" />
+    <Content Include="Complementos\echarts\location-by-session-crm.js" />
+    <Content Include="Complementos\echarts\market-share-ecommerce.js" />
+    <Content Include="Complementos\echarts\market-share.js" />
+    <Content Include="Complementos\echarts\most-leads.js" />
+    <Content Include="Complementos\echarts\real-time-users.js" />
+    <Content Include="Complementos\echarts\report-for-this-week.js" />
+    <Content Include="Complementos\echarts\returning-customer-rate.js" />
+    <Content Include="Complementos\echarts\sales-by-pos-location.js" />
+    <Content Include="Complementos\echarts\session-by-browser.js" />
+    <Content Include="Complementos\echarts\session-by-country-map.js" />
+    <Content Include="Complementos\echarts\session-by-country.js" />
+    <Content Include="Complementos\echarts\top-products.js" />
+    <Content Include="Complementos\echarts\total-order.js" />
+    <Content Include="Complementos\echarts\total-sales-ecommerce.js" />
+    <Content Include="Complementos\echarts\total-sales.js" />
+    <Content Include="Complementos\echarts\traffic-channels.js" />
+    <Content Include="Complementos\echarts\users-by-time.js" />
+    <Content Include="Complementos\echarts\weekly-sales.js" />
+    <Content Include="Complementos\icons\arrows-h.svg" />
+    <Content Include="Complementos\icons\calendar.png" />
+    <Content Include="Complementos\icons\chrome-logo.png" />
+    <Content Include="Complementos\icons\cloud-download-.svg" />
+    <Content Include="Complementos\icons\cloud-download.svg" />
+    <Content Include="Complementos\icons\cloud-upload.svg" />
+    <Content Include="Complementos\icons\connect-circle.png" />
+    <Content Include="Complementos\icons\cookie-1.png" />
+    <Content Include="Complementos\icons\cookie.png" />
+    <Content Include="Complementos\icons\docs.png" />
+    <Content Include="Complementos\icons\edit-alt-.svg" />
+    <Content Include="Complementos\icons\edit-alt.svg" />
+    <Content Include="Complementos\icons\firefox-logo.png" />
+    <Content Include="Complementos\icons\folder-open-solid.svg" />
+    <Content Include="Complementos\icons\folder-solid.svg" />
+    <Content Include="Complementos\icons\free.svg" />
+    <Content Include="Complementos\icons\icon-angle-right.svg" />
+    <Content Include="Complementos\icons\icon-payment-methods-grid.png" />
+    <Content Include="Complementos\icons\icon-payment-methods.png" />
+    <Content Include="Complementos\icons\icon-paypal-full.png" />
+    <Content Include="Complementos\icons\image.png" />
+    <Content Include="Complementos\icons\leaflet\layers-2x.png" />
+    <Content Include="Complementos\icons\leaflet\layers.png" />
+    <Content Include="Complementos\icons\leaflet\marker-icon-2x.png" />
+    <Content Include="Complementos\icons\leaflet\marker-icon.png" />
+    <Content Include="Complementos\icons\leaflet\marker-shadow.png" />
+    <Content Include="Complementos\icons\left-arrow-from-left.svg" />
+    <Content Include="Complementos\icons\location.png" />
+    <Content Include="Complementos\icons\map-marker.png" />
+    <Content Include="Complementos\icons\moon.svg" />
+    <Content Include="Complementos\icons\paragraph.svg" />
+    <Content Include="Complementos\icons\pro.svg" />
+    <Content Include="Complementos\icons\radarRect.png" />
+    <Content Include="Complementos\icons\safari-logo.png" />
+    <Content Include="Complementos\icons\sent.svg" />
+    <Content Include="Complementos\icons\shield.png" />
+    <Content Include="Complementos\icons\shield.svg" />
+    <Content Include="Complementos\icons\signal.png" />
+    <Content Include="Complementos\icons\spot-illustrations\1.svg" />
+    <Content Include="Complementos\icons\spot-illustrations\16.png" />
+    <Content Include="Complementos\icons\spot-illustrations\2.svg" />
+    <Content Include="Complementos\icons\spot-illustrations\21.png" />
+    <Content Include="Complementos\icons\spot-illustrations\3.svg" />
+    <Content Include="Complementos\icons\spot-illustrations\4.png" />
+    <Content Include="Complementos\icons\spot-illustrations\4.svg" />
+    <Content Include="Complementos\icons\spot-illustrations\41.png" />
+    <Content Include="Complementos\icons\spot-illustrations\45.png" />
+    <Content Include="Complementos\icons\spot-illustrations\47.png" />
+    <Content Include="Complementos\icons\spot-illustrations\48.png" />
+    <Content Include="Complementos\icons\spot-illustrations\49.png" />
+    <Content Include="Complementos\icons\spot-illustrations\5.png" />
+    <Content Include="Complementos\icons\spot-illustrations\5.svg" />
+    <Content Include="Complementos\icons\spot-illustrations\50.png" />
+    <Content Include="Complementos\icons\spot-illustrations\6.png" />
+    <Content Include="Complementos\icons\spot-illustrations\6.svg" />
+    <Content Include="Complementos\icons\spot-illustrations\authentication-corner.png" />
+    <Content Include="Complementos\icons\spot-illustrations\bg-shape.png" />
+    <Content Include="Complementos\icons\spot-illustrations\calendar.svg" />
+    <Content Include="Complementos\icons\spot-illustrations\comment-active.png" />
+    <Content Include="Complementos\icons\spot-illustrations\comment-inactive.png" />
+    <Content Include="Complementos\icons\spot-illustrations\corner-1.png" />
+    <Content Include="Complementos\icons\spot-illustrations\corner-2.png" />
+    <Content Include="Complementos\icons\spot-illustrations\corner-3.png" />
+    <Content Include="Complementos\icons\spot-illustrations\corner-4.png" />
+    <Content Include="Complementos\icons\spot-illustrations\corner-5.png" />
+    <Content Include="Complementos\icons\spot-illustrations\creating.png" />
+    <Content Include="Complementos\icons\spot-illustrations\ecommerce-bg.png" />
+    <Content Include="Complementos\icons\spot-illustrations\editing.svg" />
+    <Content Include="Complementos\icons\spot-illustrations\envelope.png" />
+    <Content Include="Complementos\icons\spot-illustrations\falcon.png" />
+    <Content Include="Complementos\icons\spot-illustrations\gifts.png" />
+    <Content Include="Complementos\icons\spot-illustrations\half-circle-1.png" />
+    <Content Include="Complementos\icons\spot-illustrations\half-circle.png" />
+    <Content Include="Complementos\icons\spot-illustrations\image.svg" />
+    <Content Include="Complementos\icons\spot-illustrations\international-women-s-day-2.png" />
+    <Content Include="Complementos\icons\spot-illustrations\international-women-s-day.jpg" />
+    <Content Include="Complementos\icons\spot-illustrations\like-active.png" />
+    <Content Include="Complementos\icons\spot-illustrations\like-inactive.png" />
+    <Content Include="Complementos\icons\spot-illustrations\location.svg" />
+    <Content Include="Complementos\icons\spot-illustrations\navbar-vertical.png" />
+    <Content Include="Complementos\icons\spot-illustrations\paper-plane.svg" />
+    <Content Include="Complementos\icons\spot-illustrations\rocket.png" />
+    <Content Include="Complementos\icons\spot-illustrations\settings.png" />
+    <Content Include="Complementos\icons\spot-illustrations\shape-1.png" />
+    <Content Include="Complementos\icons\spot-illustrations\share-active.png" />
+    <Content Include="Complementos\icons\spot-illustrations\share-inactive.png" />
+    <Content Include="Complementos\icons\spot-illustrations\startup.svg" />
+    <Content Include="Complementos\icons\star_on.svg" />
+    <Content Include="Complementos\icons\sun.svg" />
+    <Content Include="Complementos\icons\visa.png" />
+    <Content Include="Complementos\icons\weather-icon.png" />
+    <Content Include="Complementos\icons\weather-sm.jpg" />
+    <Content Include="Complementos\icons\weather.jpg" />
+    <Content Include="Complementos\icons\zip.png" />
+    <Content Include="Complementos\img\14.jpg" />
+    <Content Include="Complementos\img\3-thumb.png" />
+    <Content Include="Complementos\img\logo.png" />
+    <Content Include="Complementos\img\logoTO.png" />
+    <Content Include="Complementos\img\card.png" />
+    <Content Include="Complementos\img\default-avatar.png" />
+    <Content Include="Complementos\img\default.png" />
+    <Content Include="Complementos\img\falcon-mode-dark.jpg" />
+    <Content Include="Complementos\img\falcon-mode-default.jpg" />
+    <Content Include="Complementos\img\inverted.png" />
+    <Content Include="Complementos\img\menu.png" />
+    <Content Include="Complementos\img\usuario.png" />
+    <Content Include="Complementos\img\vibrant.png" />
+    <Content Include="Complementos\js\config.js" />
+    <Content Include="Complementos\js\echart-example.js" />
+    <Content Include="Complementos\js\echarts-example.js" />
+    <Content Include="Complementos\js\echarts.min.js" />
+    <Content Include="Complementos\js\emoji-button.js" />
+    <Content Include="Complementos\js\flatpickr.js" />
+    <Content Include="Complementos\js\graficos.js" />
+    <Content Include="Complementos\js\menu.js" />
+    <Content Include="Complementos\js\notificaciones.js" />
+    <Content Include="Complementos\js\pie-chart.js" />
+    <Content Include="Complementos\js\theme.js" />
+    <Content Include="Complementos\js\theme.min.js" />
+    <Content Include="Complementos\js\Validaciones.js" />
+    <Content Include="Complementos\modules\components\accordion.html" />
+    <Content Include="Complementos\modules\components\alerts.html" />
+    <Content Include="Complementos\modules\components\anchor.html" />
+    <Content Include="Complementos\modules\components\animated-icons.html" />
+    <Content Include="Complementos\modules\components\background.html" />
+    <Content Include="Complementos\modules\components\badges.html" />
+    <Content Include="Complementos\modules\components\breadcrumbs.html" />
+    <Content Include="Complementos\modules\components\buttons.html" />
+    <Content Include="Complementos\modules\components\calendar.html" />
+    <Content Include="Complementos\modules\components\cards.html" />
+    <Content Include="Complementos\modules\components\carousel\bootstrap.html" />
+    <Content Include="Complementos\modules\components\carousel\swiper.html" />
+    <Content Include="Complementos\modules\components\close-button.html" />
+    <Content Include="Complementos\modules\components\collapse.html" />
+    <Content Include="Complementos\modules\components\cookie-notice.html" />
+    <Content Include="Complementos\modules\components\countup.html" />
+    <Content Include="Complementos\modules\components\draggable.html" />
+    <Content Include="Complementos\modules\components\dropdowns.html" />
+    <Content Include="Complementos\modules\components\list-group.html" />
+    <Content Include="Complementos\modules\components\modals.html" />
+    <Content Include="Complementos\modules\components\navs-and-tabs\combo-navbar.html" />
+    <Content Include="Complementos\modules\components\navs-and-tabs\navbar.html" />
+    <Content Include="Complementos\modules\components\navs-and-tabs\navs.html" />
+    <Content Include="Complementos\modules\components\navs-and-tabs\tabs.html" />
+    <Content Include="Complementos\modules\components\navs-and-tabs\top-navbar.html" />
+    <Content Include="Complementos\modules\components\navs-and-tabs\vertical-navbar.html" />
+    <Content Include="Complementos\modules\components\offcanvas.html" />
+    <Content Include="Complementos\modules\components\pagination.html" />
+    <Content Include="Complementos\modules\components\pictures\avatar.html" />
+    <Content Include="Complementos\modules\components\pictures\figures.html" />
+    <Content Include="Complementos\modules\components\pictures\hoverbox.html" />
+    <Content Include="Complementos\modules\components\pictures\images.html" />
+    <Content Include="Complementos\modules\components\pictures\lightbox.html" />
+    <Content Include="Complementos\modules\components\placeholder.html" />
+    <Content Include="Complementos\modules\components\popovers.html" />
+    <Content Include="Complementos\modules\components\progress-bar.html" />
+    <Content Include="Complementos\modules\components\scrollspy.html" />
+    <Content Include="Complementos\modules\components\search.html" />
+    <Content Include="Complementos\modules\components\spinners.html" />
+    <Content Include="Complementos\modules\components\toasts.html" />
+    <Content Include="Complementos\modules\components\tooltips.html" />
+    <Content Include="Complementos\modules\components\treeview.html" />
+    <Content Include="Complementos\modules\components\typed-text.html" />
+    <Content Include="Complementos\modules\components\videos\embed.html" />
+    <Content Include="Complementos\modules\components\videos\plyr.html" />
+    <Content Include="Complementos\vendors\anchorjs\anchor.min.js" />
+    <Content Include="Complementos\vendors\bootstrap\bootstrap.min.js" />
+    <Content Include="Complementos\vendors\chart\chart.min.js" />
+    <Content Include="Complementos\vendors\choices\base.min.css" />
+    <Content Include="Complementos\vendors\choices\choices.min.css" />
+    <Content Include="Complementos\vendors\choices\choices.min.js" />
+    <Content Include="Complementos\vendors\countup\countUp.umd.js" />
+    <Content Include="Complementos\vendors\dayjs\dayjs.min.js" />
+    <Content Include="Complementos\vendors\draggable\draggable.bundle.legacy.js" />
+    <Content Include="Complementos\vendors\dropzone\dropzone.min.css" />
+    <Content Include="Complementos\vendors\dropzone\dropzone.min.js" />
+    <Content Include="Complementos\vendors\echarts-countries-js\map\USA.js" />
+    <Content Include="Complementos\vendors\echarts-countries-js\map\world.js" />
+    <Content Include="Complementos\vendors\echarts-countries-js\world\world.js" />
+    <Content Include="Complementos\vendors\echarts\echarts.min.js" />
+    <Content Include="Complementos\vendors\flatpickr\flatpickr.min.css" />
+    <Content Include="Complementos\vendors\fontawesome\all.min.js" />
+    <Content Include="Complementos\vendors\fullcalendar\main.js" />
+    <Content Include="Complementos\vendors\fullcalendar\main.min.css" />
+    <Content Include="Complementos\vendors\fullcalendar\main.min.js" />
+    <Content Include="Complementos\vendors\glightbox\glightbox.min.css" />
+    <Content Include="Complementos\vendors\glightbox\glightbox.min.js" />
+    <Content Include="Complementos\vendors\is\is.min.js" />
+    <Content Include="Complementos\vendors\leaflet.markercluster\leaflet.markercluster.js" />
+    <Content Include="Complementos\vendors\leaflet.markercluster\MarkerCluster.css" />
+    <Content Include="Complementos\vendors\leaflet.markercluster\MarkerCluster.Default.css" />
+    <Content Include="Complementos\vendors\leaflet.tilelayer.colorfilter\leaflet-tilelayer-colorfilter.min.js" />
+    <Content Include="Complementos\vendors\leaflet\leaflet.css" />
+    <Content Include="Complementos\vendors\leaflet\leaflet.js" />
+    <Content Include="Complementos\vendors\list.js\list.min.js" />
+    <Content Include="Complementos\vendors\lodash\lodash.min.js" />
+    <Content Include="Complementos\vendors\lottie\lottie.min.js" />
+    <Content Include="Complementos\vendors\overlayscrollbars\OverlayScrollbars.min.css" />
+    <Content Include="Complementos\vendors\overlayscrollbars\OverlayScrollbars.min.js" />
+    <Content Include="Complementos\vendors\plyr\plyr.css" />
+    <Content Include="Complementos\vendors\plyr\plyr.polyfilled.min.js" />
+    <Content Include="Complementos\vendors\popper\popper.min.js" />
+    <Content Include="Complementos\vendors\prism\prism-okaidia.css" />
+    <Content Include="Complementos\vendors\prism\prism.js" />
+    <Content Include="Complementos\vendors\rater-js\index.js" />
+    <Content Include="Complementos\vendors\rater-js\rater-js.js" />
+    <Content Include="Complementos\vendors\rater-js\star_0.svg" />
+    <Content Include="Complementos\vendors\rater-js\star_1.svg" />
+    <Content Include="Complementos\vendors\rater-js\style.css" />
+    <Content Include="Complementos\vendors\simplebar\simplebar.min.css" />
+    <Content Include="Complementos\vendors\simplebar\simplebar.min.js" />
+    <Content Include="Complementos\vendors\swiper\swiper-bundle.min.css" />
+    <Content Include="Complementos\vendors\swiper\swiper-bundle.min.js" />
+    <Content Include="Complementos\vendors\tiny-slider\tiny-slider.css" />
+    <Content Include="Complementos\vendors\tiny-slider\tiny-slider.js" />
+    <Content Include="Complementos\vendors\typed.js\typed.js" />
+    <Content Include="Complementos\vendors\validator\validator.min.js" />
+    <Content Include="Detalle_LC.aspx" />
+    <Content Include="FacturarEP.aspx" />
+    <Content Include="InfAumentoOC.aspx" />
+    <Content Include="ListadoITs.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Logistica.aspx" />
+    <Content Include="LotesNoEncontrados.aspx" />
+    <Content Include="menuprincipal.aspx" />
+    <Content Include="ObrasFinalizadas.aspx" />
+    <Content Include="OficinaTecnica.aspx" />
+    <Content Include="ServiciosExtra.aspx" />
+    <Content Include="WebParts\Contactos.ascx" />
+    <Content Include="WebParts\ContratosOrdendeCompra.ascx" />
+    <Content Include="WebParts\DetaleCamionLogistica.ascx" />
+    <Content Include="WebParts\DetalleIT.ascx" />
+    <Content Include="WebParts\ListadoPrecios.ascx" />
+    <Content Include="WebParts\Observaciones.ascx" />
+    <Content Include="WebParts\OrdenesCompravsDespachos.ascx" />
+    <Content Include="WebParts\PanelSuperior.ascx" />
+    <Content Include="Prueba.aspx" />
+    <Content Include="prueba\ajax-loader.gif" />
+    <Content Include="prueba\animate.css" />
+    <Content Include="prueba\aos.css" />
+    <Content Include="prueba\bootstrap.min.css" />
+    <Content Include="prueba\bootstrap\bootstrap-grid.css" />
+    <Content Include="prueba\bootstrap\bootstrap-reboot.css" />
+    <Content Include="prueba\css\bootstrap-reboot.css" />
+    <Content Include="prueba\css\mixins\_text-hide.css" />
+    <Content Include="prueba\flaticon.css" />
+    <Content Include="prueba\icomoon.css" />
+    <Content Include="prueba\images\about-1.jpg" />
+    <Content Include="prueba\images\about.jpg" />
+    <Content Include="prueba\images\bg_1.jpg" />
+    <Content Include="prueba\images\bg_2.jpg" />
+    <Content Include="prueba\images\image_1.jpg" />
+    <Content Include="prueba\images\image_2.jpg" />
+    <Content Include="prueba\images\image_3.jpg" />
+    <Content Include="prueba\images\image_4.jpg" />
+    <Content Include="prueba\images\image_5.jpg" />
+    <Content Include="prueba\images\image_6.jpg" />
+    <Content Include="prueba\images\loc.png" />
+    <Content Include="prueba\images\person_1.jpg" />
+    <Content Include="prueba\images\person_2.jpg" />
+    <Content Include="prueba\images\person_3.jpg" />
+    <Content Include="prueba\images\person_4.jpg" />
+    <Content Include="prueba\images\project-1.jpg" />
+    <Content Include="prueba\images\project-2.jpg" />
+    <Content Include="prueba\images\project-3.jpg" />
+    <Content Include="prueba\images\project-4.jpg" />
+    <Content Include="prueba\images\project-5.jpg" />
+    <Content Include="prueba\images\project-6.jpg" />
+    <Content Include="prueba\images\staff-1.jpg" />
+    <Content Include="prueba\images\staff-2.jpg" />
+    <Content Include="prueba\images\staff-3.jpg" />
+    <Content Include="prueba\images\staff-4.jpg" />
+    <Content Include="prueba\images\team-1.jpg" />
+    <Content Include="prueba\images\team-2.jpg" />
+    <Content Include="prueba\images\team-3.jpg" />
+    <Content Include="prueba\images\team-4.jpg" />
+    <Content Include="prueba\images\testimony-1.jpg" />
+    <Content Include="prueba\images\testimony-2.jpg" />
+    <Content Include="prueba\ionicons.min.css" />
+    <Content Include="prueba\magnific-popup.css" />
+    <Content Include="prueba\open-iconic-bootstrap.min.css" />
+    <Content Include="prueba\owl.carousel.min.css" />
+    <Content Include="prueba\owl.theme.default.min.css" />
+    <Content Include="prueba\style.css" />
+    <Content Include="VincularGuiaFactura.aspx" />
+    <Content Include="WebUserControl1.ascx" />
+    <None Include="Connected Services\PX_Facturacion\Facturacion.disco" />
+    <None Include="Connected Services\PX_Facturacion\configuration91.svcinfo" />
+    <None Include="Connected Services\PX_Facturacion\configuration.svcinfo" />
+    <Content Include="Connected Services\PX_Facturacion\Maqueta.PX_Facturacion.ListaDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PX_Facturacion\Maqueta.PX_Facturacion.Parametro.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PX_Facturacion\Maqueta.PX_Facturacion.Viaje.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\PX_Facturacion\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <Content Include="FichaObra.aspx" />
+    <Content Include="General.aspx" />
+    <Content Include="IngresoOC.aspx" />
+    <Content Include="IngresoPrecioServicios.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Calidad.aspx.designer.vb">
+      <DependentUpon>Calidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calidad.aspx.vb">
+      <DependentUpon>Calidad.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CambioPrecioMasivo.aspx.designer.vb">
+      <DependentUpon>CambioPrecioMasivo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CambioPrecioMasivo.aspx.vb">
+      <DependentUpon>CambioPrecioMasivo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Clases\Datos.vb" />
+    <Compile Include="Clases\Validar.vb" />
+    <Compile Include="CodigosParaFacturar.aspx.designer.vb">
+      <DependentUpon>CodigosParaFacturar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CodigosParaFacturar.aspx.vb">
+      <DependentUpon>CodigosParaFacturar.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="COF.aspx.designer.vb">
+      <DependentUpon>COF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="COF.aspx.vb">
+      <DependentUpon>COF.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Connected Services\PX_Facturacion\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Detalle_LC.aspx.designer.vb">
+      <DependentUpon>Detalle_LC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Detalle_LC.aspx.vb">
+      <DependentUpon>Detalle_LC.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FacturarEP.aspx.designer.vb">
+      <DependentUpon>FacturarEP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FacturarEP.aspx.vb">
+      <DependentUpon>FacturarEP.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FichaObra.aspx.designer.vb">
+      <DependentUpon>FichaObra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FichaObra.aspx.vb">
+      <DependentUpon>FichaObra.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="General.aspx.designer.vb">
+      <DependentUpon>General.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General.aspx.vb">
+      <DependentUpon>General.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="InfAumentoOC.aspx.designer.vb">
+      <DependentUpon>InfAumentoOC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfAumentoOC.aspx.vb">
+      <DependentUpon>InfAumentoOC.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="IngresoOC.aspx.designer.vb">
+      <DependentUpon>IngresoOC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IngresoOC.aspx.vb">
+      <DependentUpon>IngresoOC.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="IngresoPrecioServicios.aspx.designer.vb">
+      <DependentUpon>IngresoPrecioServicios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IngresoPrecioServicios.aspx.vb">
+      <DependentUpon>IngresoPrecioServicios.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ListadoITs.aspx.designer.vb">
+      <DependentUpon>ListadoITs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoITs.aspx.vb">
+      <DependentUpon>ListadoITs.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Logistica.aspx.designer.vb">
+      <DependentUpon>Logistica.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logistica.aspx.vb">
+      <DependentUpon>Logistica.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="LotesNoEncontrados.aspx.designer.vb">
+      <DependentUpon>LotesNoEncontrados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LotesNoEncontrados.aspx.vb">
+      <DependentUpon>LotesNoEncontrados.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="menuprincipal.aspx.designer.vb">
+      <DependentUpon>menuprincipal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="menuprincipal.aspx.vb">
+      <DependentUpon>menuprincipal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ObrasFinalizadas.aspx.designer.vb">
+      <DependentUpon>ObrasFinalizadas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ObrasFinalizadas.aspx.vb">
+      <DependentUpon>ObrasFinalizadas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OficinaTecnica.aspx.designer.vb">
+      <DependentUpon>OficinaTecnica.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OficinaTecnica.aspx.vb">
+      <DependentUpon>OficinaTecnica.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ServiciosExtra.aspx.designer.vb">
+      <DependentUpon>ServiciosExtra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServiciosExtra.aspx.vb">
+      <DependentUpon>ServiciosExtra.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\Contactos.ascx.designer.vb">
+      <DependentUpon>Contactos.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\Contactos.ascx.vb">
+      <DependentUpon>Contactos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\ContratosOrdendeCompra.ascx.designer.vb">
+      <DependentUpon>ContratosOrdendeCompra.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\ContratosOrdendeCompra.ascx.vb">
+      <DependentUpon>ContratosOrdendeCompra.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\DetaleCamionLogistica.ascx.designer.vb">
+      <DependentUpon>DetaleCamionLogistica.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\DetaleCamionLogistica.ascx.vb">
+      <DependentUpon>DetaleCamionLogistica.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\DetalleIT.ascx.designer.vb">
+      <DependentUpon>DetalleIT.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\DetalleIT.ascx.vb">
+      <DependentUpon>DetalleIT.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\ListadoPrecios.ascx.designer.vb">
+      <DependentUpon>ListadoPrecios.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\ListadoPrecios.ascx.vb">
+      <DependentUpon>ListadoPrecios.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\Observaciones.ascx.designer.vb">
+      <DependentUpon>Observaciones.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\Observaciones.ascx.vb">
+      <DependentUpon>Observaciones.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\OrdenesCompravsDespachos.ascx.designer.vb">
+      <DependentUpon>OrdenesCompravsDespachos.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\OrdenesCompravsDespachos.ascx.vb">
+      <DependentUpon>OrdenesCompravsDespachos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\PanelSuperior.ascx.designer.vb">
+      <DependentUpon>PanelSuperior.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\PanelSuperior.ascx.vb">
+      <DependentUpon>PanelSuperior.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Prueba.aspx.designer.vb">
+      <DependentUpon>Prueba.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Prueba.aspx.vb">
+      <DependentUpon>Prueba.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="VincularGuiaFactura.aspx.designer.vb">
+      <DependentUpon>VincularGuiaFactura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VincularGuiaFactura.aspx.vb">
+      <DependentUpon>VincularGuiaFactura.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl1.ascx.designer.vb">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl1.ascx.vb">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Complementos\css\theme-rtl.css.map" />
+    <Content Include="Complementos\css\theme-rtl.min.css.map" />
+    <Content Include="Complementos\css\theme.css.map" />
+    <Content Include="Complementos\css\theme.min.css.map" />
+    <Content Include="Complementos\css\user-rtl.css.map" />
+    <Content Include="Complementos\css\user-rtl.min.css.map" />
+    <Content Include="Complementos\css\user.css.map" />
+    <Content Include="Complementos\css\user.min.css.map" />
+    <Content Include="Complementos\js\config.js.map" />
+    <Content Include="Complementos\js\echart-example.js.map" />
+    <Content Include="Complementos\js\echarts-example.js.map" />
+    <Content Include="Complementos\js\theme.js.map" />
+    <Content Include="Complementos\js\theme.min.js.map" />
+    <Content Include="Complementos\vendors\bootstrap\bootstrap.min.js.map" />
+    <Content Include="Complementos\vendors\leaflet.markercluster\leaflet.markercluster.js.map" />
+    <Content Include="Complementos\vendors\leaflet\leaflet.js.map" />
+    <Content Include="Complementos\vendors\list.js\list.min.js.map" />
+    <Content Include="Complementos\vendors\plyr\plyr.polyfilled.min.js.map" />
+    <Content Include="Complementos\vendors\popper\popper.min.js.map" />
+    <Content Include="Complementos\vendors\tiny-slider\tiny-slider.css.map" />
+    <Content Include="Complementos\vendors\tiny-slider\tiny-slider.scss" />
+    <None Include="Connected Services\PX_Facturacion\Facturacion.wsdl" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="My Project\DataSources\System.Data.DataSet.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="prueba\.DS_Store" />
+    <Content Include="prueba\bootstrap\.DS_Store" />
+    <Content Include="prueba\css\.DS_Store" />
+    <Content Include="prueba\images\.DS_Store" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\PX_Facturacion\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Archivos\" />
+    <Folder Include="Cubigestt\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55158</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55158/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
