@@ -212,5 +212,6 @@ Public Class Logistica
         lres = New Datos().PermisoModulos(Session("idUsuario"), 1085)
         PanelLOG.Visible = lres
         PanelDetalle.Visible = lres
+
     End Sub
 End Class

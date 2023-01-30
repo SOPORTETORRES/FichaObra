@@ -41,22 +41,22 @@ Partial Public Class PanelSuperior1
     Protected WithEvents PanelPiezas As Global.System.Web.UI.WebControls.Panel
     
     '''<summary>
-    '''Control panelCrearIT.
+    '''Control PanelCrearIT.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents panelCrearIT As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents PanelCrearIT As Global.System.Web.UI.WebControls.Panel
     
     '''<summary>
-    '''Control panelInformes.
+    '''Control PanelInformes.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents panelInformes As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents PanelInformes As Global.System.Web.UI.WebControls.Panel
     
     '''<summary>
     '''Control PanelParametros.
@@ -68,22 +68,22 @@ Partial Public Class PanelSuperior1
     Protected WithEvents PanelParametros As Global.System.Web.UI.WebControls.Panel
     
     '''<summary>
-    '''Control PanelGestionOC.
+    '''Control PanelGestion.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents PanelGestionOC As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents PanelGestion As Global.System.Web.UI.WebControls.Panel
     
     '''<summary>
-    '''Control PanelINET.
+    '''Control PanelInet.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents PanelINET As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents PanelInet As Global.System.Web.UI.WebControls.Panel
     
     '''<summary>
     '''Control PanelRRHH.
@@ -111,40 +111,4 @@ Partial Public Class PanelSuperior1
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents PanelComercial As Global.System.Web.UI.WebControls.Panel
-    
-    '''<summary>
-    '''Control lbl.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents lbl As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
-    '''Control lblUsuario.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents lblUsuario As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
-    '''Control Label2.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
-    '''Control lblEntorno.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents lblEntorno As Global.System.Web.UI.WebControls.Label
 End Class

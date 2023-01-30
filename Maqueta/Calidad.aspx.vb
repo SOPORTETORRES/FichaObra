@@ -74,7 +74,7 @@ Public Class Calidad
 
     Protected Sub gvControl_RowDataBound(sender As Object, e As GridViewRowEventArgs) Handles gvControl.RowDataBound
         If e.Row.Cells(4).Text = "Rechazado" Then
-            e.Row.BackColor = Color.LightSalmon
+            e.Row.BackColor = Color.LightCoral
             e.Row.ForeColor = Color.White
         ElseIf e.Row.Cells(4).Text = "Aprobado" Then
             e.Row.BackColor = Color.LightGreen
