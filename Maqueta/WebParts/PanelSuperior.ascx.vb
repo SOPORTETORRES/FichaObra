@@ -5,6 +5,7 @@
         'If Session("Pestaña") = "C.O.F" Then
         '    Panel1.Visible = False
         'End If
+        lblUsuario.Text = Session("UsuarioLogueado")
     End Sub
 
 End Class

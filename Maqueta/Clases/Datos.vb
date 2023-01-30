@@ -395,4 +395,11 @@ Public Class Datos
             Return False
         End If
     End Function
+
+    Public Function CargaTablaObras() As DataTable
+        Dim lTblRes As New DataTable, ldal As New Datos, lSql As String = ""
+        lSql = String.Concat("  SP_Consultas_FichaObra  25 ,'','','','','','','','','',''")
+        lTblRes = ldal.CargaTabla(lSql, "L")
+        Return lTblRes
+    End Function
 End Class

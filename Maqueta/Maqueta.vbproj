@@ -276,18 +276,11 @@
     <Content Include="Complementos\icons\weather.jpg" />
     <Content Include="Complementos\icons\zip.png" />
     <Content Include="Complementos\img\14.jpg" />
-    <Content Include="Complementos\img\3-thumb.png" />
     <Content Include="Complementos\img\logo.png" />
     <Content Include="Complementos\img\logoTO.png" />
-    <Content Include="Complementos\img\card.png" />
     <Content Include="Complementos\img\default-avatar.png" />
-    <Content Include="Complementos\img\default.png" />
-    <Content Include="Complementos\img\falcon-mode-dark.jpg" />
-    <Content Include="Complementos\img\falcon-mode-default.jpg" />
-    <Content Include="Complementos\img\inverted.png" />
     <Content Include="Complementos\img\menu.png" />
     <Content Include="Complementos\img\usuario.png" />
-    <Content Include="Complementos\img\vibrant.png" />
     <Content Include="Complementos\js\config.js" />
     <Content Include="Complementos\js\echart-example.js" />
     <Content Include="Complementos\js\echarts-example.js" />
@@ -418,53 +411,6 @@
     <Content Include="WebParts\OrdenesCompravsDespachos.ascx" />
     <Content Include="WebParts\PanelSuperior.ascx" />
     <Content Include="Prueba.aspx" />
-    <Content Include="prueba\ajax-loader.gif" />
-    <Content Include="prueba\animate.css" />
-    <Content Include="prueba\aos.css" />
-    <Content Include="prueba\bootstrap.min.css" />
-    <Content Include="prueba\bootstrap\bootstrap-grid.css" />
-    <Content Include="prueba\bootstrap\bootstrap-reboot.css" />
-    <Content Include="prueba\css\bootstrap-reboot.css" />
-    <Content Include="prueba\css\mixins\_text-hide.css" />
-    <Content Include="prueba\flaticon.css" />
-    <Content Include="prueba\icomoon.css" />
-    <Content Include="prueba\images\about-1.jpg" />
-    <Content Include="prueba\images\about.jpg" />
-    <Content Include="prueba\images\bg_1.jpg" />
-    <Content Include="prueba\images\bg_2.jpg" />
-    <Content Include="prueba\images\image_1.jpg" />
-    <Content Include="prueba\images\image_2.jpg" />
-    <Content Include="prueba\images\image_3.jpg" />
-    <Content Include="prueba\images\image_4.jpg" />
-    <Content Include="prueba\images\image_5.jpg" />
-    <Content Include="prueba\images\image_6.jpg" />
-    <Content Include="prueba\images\loc.png" />
-    <Content Include="prueba\images\person_1.jpg" />
-    <Content Include="prueba\images\person_2.jpg" />
-    <Content Include="prueba\images\person_3.jpg" />
-    <Content Include="prueba\images\person_4.jpg" />
-    <Content Include="prueba\images\project-1.jpg" />
-    <Content Include="prueba\images\project-2.jpg" />
-    <Content Include="prueba\images\project-3.jpg" />
-    <Content Include="prueba\images\project-4.jpg" />
-    <Content Include="prueba\images\project-5.jpg" />
-    <Content Include="prueba\images\project-6.jpg" />
-    <Content Include="prueba\images\staff-1.jpg" />
-    <Content Include="prueba\images\staff-2.jpg" />
-    <Content Include="prueba\images\staff-3.jpg" />
-    <Content Include="prueba\images\staff-4.jpg" />
-    <Content Include="prueba\images\team-1.jpg" />
-    <Content Include="prueba\images\team-2.jpg" />
-    <Content Include="prueba\images\team-3.jpg" />
-    <Content Include="prueba\images\team-4.jpg" />
-    <Content Include="prueba\images\testimony-1.jpg" />
-    <Content Include="prueba\images\testimony-2.jpg" />
-    <Content Include="prueba\ionicons.min.css" />
-    <Content Include="prueba\magnific-popup.css" />
-    <Content Include="prueba\open-iconic-bootstrap.min.css" />
-    <Content Include="prueba\owl.carousel.min.css" />
-    <Content Include="prueba\owl.theme.default.min.css" />
-    <Content Include="prueba\style.css" />
     <Content Include="VincularGuiaFactura.aspx" />
     <Content Include="WebUserControl1.ascx" />
     <None Include="Connected Services\PX_Facturacion\Facturacion.disco" />
@@ -487,7 +433,9 @@
     <Content Include="General.aspx" />
     <Content Include="IngresoOC.aspx" />
     <Content Include="IngresoPrecioServicios.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calidad.aspx.designer.vb">
@@ -763,15 +711,12 @@
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
     <Content Include="My Project\DataSources\System.Data.DataSet.datasource" />
+    <None Include="My Project\PublishProfiles\FolderProfile.pubxml" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <Content Include="prueba\.DS_Store" />
-    <Content Include="prueba\bootstrap\.DS_Store" />
-    <Content Include="prueba\css\.DS_Store" />
-    <Content Include="prueba\images\.DS_Store" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
