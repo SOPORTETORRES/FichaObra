@@ -212,6 +212,24 @@ Partial Public Class Logistica
     Protected WithEvents ContratosOrdendeCompra As Global.Maqueta.ContratosOrdendeCompra
     
     '''<summary>
+    '''Control gvControlCosto.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents gvControlCosto As Global.System.Web.UI.WebControls.GridView
+    
+    '''<summary>
+    '''Control btnAgregarDatos.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnAgregarDatos As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
     '''Control Observaciones.
     '''</summary>
     '''<remarks>

@@ -276,18 +276,10 @@
     <Content Include="Complementos\icons\weather.jpg" />
     <Content Include="Complementos\icons\zip.png" />
     <Content Include="Complementos\img\14.jpg" />
-    <Content Include="Complementos\img\3-thumb.png" />
     <Content Include="Complementos\img\logo.png" />
     <Content Include="Complementos\img\logoTO.png" />
-    <Content Include="Complementos\img\card.png" />
-    <Content Include="Complementos\img\default-avatar.png" />
-    <Content Include="Complementos\img\default.png" />
-    <Content Include="Complementos\img\falcon-mode-dark.jpg" />
-    <Content Include="Complementos\img\falcon-mode-default.jpg" />
-    <Content Include="Complementos\img\inverted.png" />
     <Content Include="Complementos\img\menu.png" />
     <Content Include="Complementos\img\usuario.png" />
-    <Content Include="Complementos\img\vibrant.png" />
     <Content Include="Complementos\js\config.js" />
     <Content Include="Complementos\js\echart-example.js" />
     <Content Include="Complementos\js\echarts-example.js" />
@@ -401,6 +393,7 @@
     <Content Include="Detalle_LC.aspx" />
     <Content Include="FacturarEP.aspx" />
     <Content Include="InfAumentoOC.aspx" />
+    <Content Include="IngresoDatosDespacho.aspx" />
     <Content Include="ListadoITs.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Logistica.aspx" />
@@ -558,6 +551,13 @@
     </Compile>
     <Compile Include="InfAumentoOC.aspx.vb">
       <DependentUpon>InfAumentoOC.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="IngresoDatosDespacho.aspx.designer.vb">
+      <DependentUpon>IngresoDatosDespacho.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IngresoDatosDespacho.aspx.vb">
+      <DependentUpon>IngresoDatosDespacho.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="IngresoOC.aspx.designer.vb">

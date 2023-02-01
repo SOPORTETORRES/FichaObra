@@ -214,4 +214,8 @@ Public Class Logistica
         PanelDetalle.Visible = lres
 
     End Sub
+
+    Protected Sub btnAgregarDatos_Click(sender As Object, e As EventArgs) Handles btnAgregarDatos.Click
+        Response.Redirect("IngresoDatosDespacho.aspx")
+    End Sub
 End Class

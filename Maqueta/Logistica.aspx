@@ -200,17 +200,17 @@
                                             <asp:ListItem Value="48">Hasta 48 horas</asp:ListItem>
                                         </asp:DropDownList>
                                     </div>
-                                    <div  class="col-3">
+                                    <div class="col-3">
                                     </div>
                                     <div class="col-6">
                                         <label class="form-label" for="lblNombreObra">Horario recepcion</label>
                                         <asp:TextBox ID="txtHoraRecepcion" CssClass="form-control" runat="server" Enabled="false" Text="Sin informacion"></asp:TextBox>
                                     </div>
-                                    <div  class="col-4">
+                                    <div class="col-4">
                                         <label class="form-label" for="lblDireccionObra">Codigo despacho</label>
                                         <asp:TextBox ID="txtCodigo" CssClass="form-control" runat="server"></asp:TextBox>
                                     </div>
-                                    <div  class="col-2">
+                                    <div class="col-2">
                                     </div>
                                     <div class="col-3">
                                         <label class="form-label" for="lbl_lcAprobada">Linea credito aprobada:</label>
@@ -240,8 +240,8 @@
                                             <asp:Literal ID="Literal1" runat="server"></asp:Literal>
                                         </div>
                                     </div>
-                                    <div class="col-12"> 
-                                        <asp:Panel ID="PanelLOG" runat="server" Visible =" false">
+                                    <div class="col-12">
+                                        <asp:Panel ID="PanelLOG" runat="server" Visible=" false">
                                             <asp:Button ID="btnGrabar" class="btn btn-primary" runat="server" Text="Grabar" />
                                         </asp:Panel>
                                         <br />
@@ -261,6 +261,43 @@
                     <br />
                     <%--TABLA CONTRATOS--%>
                     <uc1:ContratosOrdendeCompra runat="server" ID="ContratosOrdendeCompra" />
+                    <br />
+                    <div class="col-lg-12">
+                        <div class="card h-100" dir="ltr">
+                            <div class="rounded-top-lg banner-titulo">
+                                <div class="row flex-between-end">
+                                    <div class="col-auto align-self-center">
+                                        <h5 class="mb-0" style="color: white">Control costo transporte</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body bg-light">
+                                <asp:GridView ID="gvControlCosto" runat="server" class="table table-striped table-bordered" BorderStyle="None" AutoGenerateColumns="False">
+                                    <Columns>
+                                        <asp:BoundField HeaderText="Codigo producto" />
+                                        <asp:BoundField HeaderText="Nombre obra" />
+                                        <asp:BoundField HeaderText="Centro costo" />
+                                        <asp:BoundField HeaderText="Transportista" />
+                                        <asp:BoundField HeaderText="Costo neto ($)" />
+                                        <asp:BoundField HeaderText="Costo sobreestadia ($)" />
+                                        <asp:BoundField HeaderText="Costo flete falso ($)" />
+                                        <asp:BoundField HeaderText="Costo total ($)" />
+                                        <asp:BoundField HeaderText="Sucursal" />
+                                        <asp:BoundField HeaderText="N° factura" />
+                                        <asp:BoundField HeaderText="N° GDE" />
+                                        <asp:BoundField HeaderText="GDE en servidor" />
+                                        <asp:BoundField HeaderText="Fecha GDE" />
+                                        <asp:BoundField HeaderText="Tipo GDE" />
+                                        <asp:BoundField HeaderText="Kilos GDF" />
+                                        <asp:BoundField HeaderText="Pago cliente" />
+                                    </Columns>
+                                </asp:GridView>
+                                <br />
+                                <asp:Button ID="btnAgregarDatos" runat="server" class="btn btn-primary" Text="Ingresar datos despacho" />
+                            </div>
+                        </div>
+                    </div>
+                    <br />
                     <%--OBSERVACIONES--%>
                     <uc1:Observaciones runat="server" ID="Observaciones" />
                     <br />
@@ -276,9 +313,9 @@
                                         <h5 class="mb-0" style="color: white">Detalle camion</h5>
                                     </div>
                                     <div class="p-4 pb-0">
-                                            <div class="row g-3">
-                                                <asp:Panel ID="PanelDetalle" runat="server">
-                                                    <div class="col-4">
+                                        <div class="row g-3">
+                                            <asp:Panel ID="PanelDetalle" runat="server">
+                                                <div class="col-4">
                                                     <label class="form-label" for="lblNombreObra">Tipo Camion</label>
                                                     <asp:DropDownList ID="dpCamion" runat="server" class="form-select js-choice">
                                                         <asp:ListItem>Seleccione:</asp:ListItem>
@@ -302,66 +339,66 @@
                                                 <div class="col-8">
                                                 </div>
                                                 <div class="col-3">
-                                                     <label class="form-label" for="lblNombreObra">Hora inicio</label>
-                                                     <asp:DropDownList ID="DpHora1" runat="server" class="form-select js-choice">
-                                                         <asp:ListItem>Seleccione:</asp:ListItem>
-                                                         <asp:ListItem>06:00</asp:ListItem>
-                                                         <asp:ListItem>07:00</asp:ListItem>
-                                                         <asp:ListItem>08:00</asp:ListItem>
-                                                         <asp:ListItem>09:00</asp:ListItem>
-                                                         <asp:ListItem>10:00</asp:ListItem>
-                                                         <asp:ListItem>11:00</asp:ListItem>
-                                                         <asp:ListItem>12:00</asp:ListItem>
-                                                         <asp:ListItem>13:00</asp:ListItem>
-                                                         <asp:ListItem>14:00</asp:ListItem>
-                                                         <asp:ListItem>15:00</asp:ListItem>
-                                                         <asp:ListItem>16:00</asp:ListItem>
-                                                         <asp:ListItem>17:00</asp:ListItem>
-                                                         <asp:ListItem>18:00</asp:ListItem>
-                                                         <asp:ListItem>19:00</asp:ListItem>
-                                                         <asp:ListItem>20:00</asp:ListItem>
-                                                         <asp:ListItem>21:00</asp:ListItem>
-                                                         <asp:ListItem>22:00</asp:ListItem>
-                                                         <asp:ListItem>23:00</asp:ListItem>
-                                                         <asp:ListItem>00:00</asp:ListItem>
-                                                     </asp:DropDownList>
+                                                    <label class="form-label" for="lblNombreObra">Hora inicio</label>
+                                                    <asp:DropDownList ID="DpHora1" runat="server" class="form-select js-choice">
+                                                        <asp:ListItem>Seleccione:</asp:ListItem>
+                                                        <asp:ListItem>06:00</asp:ListItem>
+                                                        <asp:ListItem>07:00</asp:ListItem>
+                                                        <asp:ListItem>08:00</asp:ListItem>
+                                                        <asp:ListItem>09:00</asp:ListItem>
+                                                        <asp:ListItem>10:00</asp:ListItem>
+                                                        <asp:ListItem>11:00</asp:ListItem>
+                                                        <asp:ListItem>12:00</asp:ListItem>
+                                                        <asp:ListItem>13:00</asp:ListItem>
+                                                        <asp:ListItem>14:00</asp:ListItem>
+                                                        <asp:ListItem>15:00</asp:ListItem>
+                                                        <asp:ListItem>16:00</asp:ListItem>
+                                                        <asp:ListItem>17:00</asp:ListItem>
+                                                        <asp:ListItem>18:00</asp:ListItem>
+                                                        <asp:ListItem>19:00</asp:ListItem>
+                                                        <asp:ListItem>20:00</asp:ListItem>
+                                                        <asp:ListItem>21:00</asp:ListItem>
+                                                        <asp:ListItem>22:00</asp:ListItem>
+                                                        <asp:ListItem>23:00</asp:ListItem>
+                                                        <asp:ListItem>00:00</asp:ListItem>
+                                                    </asp:DropDownList>
                                                 </div>
                                                 <div class="col-3">
-                                                     <label class="form-label" for="lblNombreObra">Hora final</label>
-                                                     <asp:DropDownList ID="DpHora2" runat="server" class="form-select js-choice">
-                                                         <asp:ListItem>Seleccione:</asp:ListItem>
-                                                         <asp:ListItem>06:00</asp:ListItem>
-                                                         <asp:ListItem>07:00</asp:ListItem>
-                                                         <asp:ListItem>08:00</asp:ListItem>
-                                                         <asp:ListItem>09:00</asp:ListItem>
-                                                         <asp:ListItem>10:00</asp:ListItem>
-                                                         <asp:ListItem>11:00</asp:ListItem>
-                                                         <asp:ListItem>12:00</asp:ListItem>
-                                                         <asp:ListItem>13:00</asp:ListItem>
-                                                         <asp:ListItem>14:00</asp:ListItem>
-                                                         <asp:ListItem>15:00</asp:ListItem>
-                                                         <asp:ListItem>16:00</asp:ListItem>
-                                                         <asp:ListItem>17:00</asp:ListItem>
-                                                         <asp:ListItem>18:00</asp:ListItem>
-                                                         <asp:ListItem>19:00</asp:ListItem>
-                                                         <asp:ListItem>20:00</asp:ListItem>
-                                                         <asp:ListItem>21:00</asp:ListItem>
-                                                         <asp:ListItem>22:00</asp:ListItem>
-                                                         <asp:ListItem>23:00</asp:ListItem>
-                                                         <asp:ListItem>00:00</asp:ListItem>
-                                                     </asp:DropDownList>
+                                                    <label class="form-label" for="lblNombreObra">Hora final</label>
+                                                    <asp:DropDownList ID="DpHora2" runat="server" class="form-select js-choice">
+                                                        <asp:ListItem>Seleccione:</asp:ListItem>
+                                                        <asp:ListItem>06:00</asp:ListItem>
+                                                        <asp:ListItem>07:00</asp:ListItem>
+                                                        <asp:ListItem>08:00</asp:ListItem>
+                                                        <asp:ListItem>09:00</asp:ListItem>
+                                                        <asp:ListItem>10:00</asp:ListItem>
+                                                        <asp:ListItem>11:00</asp:ListItem>
+                                                        <asp:ListItem>12:00</asp:ListItem>
+                                                        <asp:ListItem>13:00</asp:ListItem>
+                                                        <asp:ListItem>14:00</asp:ListItem>
+                                                        <asp:ListItem>15:00</asp:ListItem>
+                                                        <asp:ListItem>16:00</asp:ListItem>
+                                                        <asp:ListItem>17:00</asp:ListItem>
+                                                        <asp:ListItem>18:00</asp:ListItem>
+                                                        <asp:ListItem>19:00</asp:ListItem>
+                                                        <asp:ListItem>20:00</asp:ListItem>
+                                                        <asp:ListItem>21:00</asp:ListItem>
+                                                        <asp:ListItem>22:00</asp:ListItem>
+                                                        <asp:ListItem>23:00</asp:ListItem>
+                                                        <asp:ListItem>00:00</asp:ListItem>
+                                                    </asp:DropDownList>
                                                 </div>
                                                 <br />
                                                 <div class="col-12">
                                                     <asp:Button ID="brnGrabar" class="btn btn-primary" runat="server" Text="Grabar" />
                                                 </div>
-                                                </asp:Panel>
-                                                <hr />
-                                                <div style="overflow-y: scroll; height: 300px; width: 1000px;">
-                                                    <asp:GridView ID="gvDetalleCamion" runat="server" class="table table-striped table-bordered" BorderStyle="None">
-                                                        <HeaderStyle CssClass="fixedHeader " />
-                                                        <AlternatingRowStyle BorderStyle="None" />
-                                                        <%--<Columns>
+                                            </asp:Panel>
+                                            <hr />
+                                            <div style="overflow-y: scroll; height: 300px; width: 1000px;">
+                                                <asp:GridView ID="gvDetalleCamion" runat="server" class="table table-striped table-bordered" BorderStyle="None">
+                                                    <HeaderStyle CssClass="fixedHeader " />
+                                                    <AlternatingRowStyle BorderStyle="None" />
+                                                    <%--<Columns>
                                                             <asp:BoundField DataField="id" HeaderText="ID" />
                                                             <asp:BoundField DataField="TipoCamion" HeaderText="Tipo Camion" />
                                                             <asp:BoundField DataField="Observacion" HeaderText="Observacion" />
@@ -373,9 +410,9 @@
                                                             <asp:BoundField DataField="FechaCrea" HeaderText="Fecha creacion" />
                                                             <asp:BoundField DataField="Usuario" HeaderText="Usuario" />
                                                         </Columns>--%>
-                                                    </asp:GridView>
-                                                </div>
+                                                </asp:GridView>
                                             </div>
+                                        </div>
                                         <br />
                                     </div>
                                 </div>

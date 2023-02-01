@@ -11,140 +11,158 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class PanelSuperior1
+Partial Public Class IngresoDatosDespacho
     
     '''<summary>
-    '''Control PanelUsuarios.
+    '''Control PanelSuperior.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents PanelUsuarios As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents PanelSuperior As Global.Maqueta.PanelSuperior1
     
     '''<summary>
-    '''Control PanelObras.
+    '''Control txtGDE.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents PanelObras As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents txtGDE As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''Control PanelPiezas.
+    '''Control btnBuscar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents PanelPiezas As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents btnBuscar As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
-    '''Control panelCrearIT.
+    '''Control txtCostoNeto.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents panelCrearIT As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents txtCostoNeto As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''Control panelInformes.
+    '''Control txtSobreestadia.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents panelInformes As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents txtSobreestadia As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''Control PanelParametros.
+    '''Control txtCostoFalso.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents PanelParametros As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents txtCostoFalso As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''Control PanelGestionOC.
+    '''Control txtNFactura.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents PanelGestionOC As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents txtNFactura As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''Control PanelINET.
+    '''Control txtCodigoProducto.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents PanelINET As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents txtCodigoProducto As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''Control PanelRRHH.
+    '''Control txtObra.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents PanelRRHH As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents txtObra As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''Control PanelServiciosTI.
+    '''Control txtCentroCosto.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents PanelServiciosTI As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents txtCentroCosto As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''Control PanelComercial.
+    '''Control txtTransportista.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents PanelComercial As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents txtTransportista As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''Control lbl.
+    '''Control txtSucursal.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lbl As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents txtSucursal As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''Control lblUsuario.
+    '''Control txtFechaGDE.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lblUsuario As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents txtFechaGDE As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''Control Label2.
+    '''Control txtTipoGDE.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents txtTipoGDE As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''Control lblEntorno.
+    '''Control txtPagoCliente.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents lblEntorno As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents txtPagoCliente As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''Control txtObs.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtObs As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''Control btnVolver.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnVolver As Global.System.Web.UI.WebControls.Button
 End Class
