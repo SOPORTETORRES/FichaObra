@@ -15,7 +15,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>CUBIGEST | Camnbio de precios </title>
+    <title>CUBIGEST | Ingreso datos despacho </title>
 
 
     <!-- ===============================================-->
@@ -25,8 +25,9 @@
     <meta name="msapplication-TileImage" content="../assets/img/favicons/mstile-150x150.png">
     <meta name="theme-color" content="#ffffff">
     <script src="Complementos/js/config.js"></script>
+    <script src="Complementos/js/notificaciones.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="Complementos/vendors/overlayscrollbars/OverlayScrollbars.min.js"></script>
-    <script src="Complementos/js/Validaciones.js"></script>
 
 
     <!-- ===============================================-->
@@ -85,12 +86,12 @@
                                 </div>
                             </div>
                             <div class="card-body bg-light">
-                                <div class="row g-3">
-                                    <div class="col-3">
-                                        <label class="form-label" for="lblNombreObra">Introducir N° GDE</label>
+                                <div class="row g-6">
+                                    <div class="col-4">
+                                        <label class="form-label" for="lblNombreObra">Introducir N° guia despacho</label>
                                         <asp:TextBox ID="txtGDE" CssClass="form-control" runat="server"></asp:TextBox>
                                         <br />
-                                        <asp:Button ID="btnBuscar" runat="server" class="btn btn-primary" Text="Buscar GDE" />
+                                        <asp:Button ID="btnBuscar" runat="server" class="btn btn-primary form-control" Text="Buscar" />
                                         <br />
                                         <br />
                                         <label class="form-label" for="peso">Costo Neto Transporte ($)</label>
@@ -101,30 +102,34 @@
                                         <asp:TextBox ID="txtCostoFalso" CssClass="form-control" runat="server"></asp:TextBox>
                                         <label class="form-label" for="lblCantidadKG">N° Factura</label>
                                         <asp:TextBox ID="txtNFactura" CssClass="form-control" runat="server"></asp:TextBox>
+                                        <label class="form-label" for="lblCantidadKG">Transportista</label>
+                                        <asp:DropDownList ID="dpTransportista" runat="server" class="form-select js-choice">
+                                            <asp:ListItem>Seleccione:</asp:ListItem>
+                                            <asp:ListItem>Btrans</asp:ListItem>
+                                            <asp:ListItem>Farias</asp:ListItem>
+                                        </asp:DropDownList>
+                                        <label class="form-label" for="lblCantidadKG">Observacion</label>
+                                        <asp:TextBox ID="txtObs" CssClass="form-control" runat="server" TextMode="MultiLine" Rows="3"></asp:TextBox>
+                                        <br />
+                                        <asp:Button ID="btnGrabar" runat="server" class="btn btn-primary form-control" Text="Grabar datos" />
                                     </div>
                                     <div class="col-1">
                                     </div>
-                                    <div class="col-5">
+                                    <div class="col-6">
                                         <label class="form-label" for="peso">Codigo producto</label>
-                                        <asp:TextBox ID="txtCodigoProducto" CssClass="form-control" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="txtCodigoProducto" CssClass="form-control" runat="server" Enabled ="false"></asp:TextBox>
                                         <label class="form-label" for="lblCantidadKG">Nombre obra</label>
-                                        <asp:TextBox ID="txtObra" CssClass="form-control" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="txtObra" CssClass="form-control" runat="server" Enabled ="false"></asp:TextBox>
                                         <label class="form-label" for="lblCantidadKG">Centro de costo</label>
-                                        <asp:TextBox ID="txtCentroCosto" CssClass="form-control" runat="server"></asp:TextBox>
-                                        <label class="form-label" for="lblCantidadKG">Transportista</label>
-                                        <asp:TextBox ID="txtTransportista" CssClass="form-control" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="txtCentroCosto" CssClass="form-control" runat="server" Enabled ="false"></asp:TextBox>
                                         <label class="form-label" for="lblCantidadKG">Sucursal</label>
-                                        <asp:TextBox ID="txtSucursal" CssClass="form-control" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="txtSucursal" CssClass="form-control" runat="server" Enabled ="false"></asp:TextBox>
                                         <label class="form-label" for="lblCantidadKG">Fecha GDE</label>
-                                        <asp:TextBox ID="txtFechaGDE" CssClass="form-control" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="txtFechaGDE" CssClass="form-control" runat="server" Enabled ="false"></asp:TextBox>
                                         <label class="form-label" for="lblCantidadKG">Tipo GDE</label>
-                                        <asp:TextBox ID="txtTipoGDE" CssClass="form-control" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="txtTipoGDE" CssClass="form-control" runat="server" Enabled ="false"></asp:TextBox>
                                         <label class="form-label" for="lblCantidadKG">Pago Cliente</label>
-                                        <asp:TextBox ID="txtPagoCliente" CssClass="form-control" runat="server"></asp:TextBox>
-                                        <label class="form-label" for="lblCantidadKG">Observacion</label>
-                                        <asp:TextBox ID="txtObs" CssClass="form-control" runat="server"></asp:TextBox>
-                                    </div>
-                                    <div class="col-3">
+                                        <asp:TextBox ID="txtPagoCliente" CssClass="form-control" runat="server" Enabled ="false"></asp:TextBox>
                                     </div>
                                     <div class="col-3">
                                         <asp:Button ID="btnVolver" runat="server" class="btn btn-primary" Text="Volver" />
@@ -134,7 +139,52 @@
                         </div>
                     </div>
                     <br />
-                    <br />
+                    <div class="col-lg-12">
+                        <div class="card h-100" dir="ltr">
+                            <div class="rounded-top-lg banner-titulo">
+                                <div class="row flex-between-end">
+                                    <div class="col-auto align-self-center">
+                                        <h5 class="mb-0" style="color: white">Control costo transporte</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body bg-light">
+                                <div style="overflow-x:auto;width:auto">
+                                <asp:GridView ID="gvControlCosto" runat="server" class="table table-striped table-bordered" BorderStyle="None" AutoGenerateColumns="False">
+                                    <Columns>
+                                        <asp:BoundField HeaderText="Codigo" DataField="Codigo_INET" >
+                                        <ItemStyle Font-Size="Smaller" />
+                                        </asp:BoundField>
+                                        <asp:BoundField HeaderText="Nombre obra" DataField="Nombre" >
+                                        <ItemStyle Font-Size="Smaller" />
+                                        </asp:BoundField>
+                                        <asp:BoundField HeaderText="Centro costo" DataField="centroCosto" />
+                                        <asp:BoundField HeaderText="Transportista" DataField="NombreTransporte" />
+                                        <asp:BoundField HeaderText="Neto ($)" DataField="costoNeto" >
+                                        </asp:BoundField>
+                                        <asp:BoundField HeaderText="Sobreestadia ($)" DataField="costosobreestadia" >
+                                        </asp:BoundField>
+                                        <asp:BoundField HeaderText="Flete falso ($)" DataField="costofleteFalso" >
+                                        </asp:BoundField>
+                                        <asp:BoundField HeaderText="Total ($)" DataField="CostoTotalTransporte" >
+                                        </asp:BoundField>
+                                        <asp:BoundField HeaderText="Sucursal" DataField="Sucursal" />
+                                        <asp:BoundField HeaderText="N° factura" DataField="NroFactura" />
+                                        <asp:BoundField HeaderText="N° GDE" DataField="NroGDE" />
+                                        <asp:BoundField HeaderText="GDE en Serv" DataField="GDE_En_Servidor" />
+                                        <asp:BoundField HeaderText="Fecha GDE" DataField="FechaGDE" >
+                                        <HeaderStyle Width="120px" />
+                                        </asp:BoundField>
+                                        <asp:BoundField HeaderText="Tipo GDE" DataField="TipoGuia" />
+                                        <asp:BoundField HeaderText="Kilos GDE" DataField="KgsGDE" />
+                                        <asp:BoundField HeaderText="Pago cliente" />
+                                        <asp:ButtonField HeaderText="Obs" CommandName="Select" Text="Ver obs" />
+                                    </Columns>
+                                </asp:GridView>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>          
             </form>
         </div>
@@ -166,6 +216,32 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
     <script src="Complementos/vendors/list.js/list.min.js"></script>
     <script src="Complementos/js/theme.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#<%=gvControlCosto.ClientID%>').DataTable({
+                //para cambiar el lenguaje a español
+                order: [[0, 'asc']],
+                "language": {
+                    "lengthMenu": "Mostrar _MENU_ registros",
+                    "zeroRecords": "No se encontraron resultados",
+                    "info": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                    "infoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+                    "infoFiltered": "(filtrado de un total de _MAX_ registros)",
+                    "sSearch": "Buscar:",
+                    "oPaginate": {
+                        "sFirst": "Primero",
+                        "sLast": "Último",
+                        "sNext": "Siguiente",
+                        "sPrevious": "Anterior"
+                    },
+                    "sProcessing": "Procesando...",
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

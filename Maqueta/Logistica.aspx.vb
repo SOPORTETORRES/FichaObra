@@ -12,6 +12,7 @@ Public Class Logistica
                 Session("Pestaña") = "Logistica"
                 CargaDatosCamion()
                 CargaDatosObra(obra)
+                CargaDatosDespacho()
             End If
         End If
     End Sub
@@ -218,4 +219,17 @@ Public Class Logistica
     Protected Sub btnAgregarDatos_Click(sender As Object, e As EventArgs) Handles btnAgregarDatos.Click
         Response.Redirect("IngresoDatosDespacho.aspx")
     End Sub
+
+    Private Sub CargaDatosDespacho()
+        Dim lDAtos As New Datos, lTblRes As New DataTable, IdObra As String = ""
+        IdObra = Session("obra")
+        lTblRes = lDAtos.CargaDatosDespacho(IdObra)
+        gvControlCosto.DataSource = lTblRes
+        gvControlCosto.DataBind()
+        If (lTblRes.Rows.Count > 0) Then
+            gvControlCosto.UseAccessibleHeader = True
+            gvControlCosto.HeaderRow.TableSection = TableRowSection.TableHeader
+        End If
+    End Sub
+
 End Class

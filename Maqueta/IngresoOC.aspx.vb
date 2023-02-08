@@ -268,10 +268,6 @@ Public Class IngresoOC
     Protected Sub Grid_OC_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Grid_OC.SelectedIndexChanged
         Dim lIndex As Integer = Grid_OC.SelectedIndex, lPathArch As String = ConfigurationManager.AppSettings.Get("PathArchivos").ToString
         Dim ListadoOC As New ArrayList
-        'Lnk_VerDoc.NavigateUrl = "../../Produccion/Archivos/" & tx_Archivo.Text
-        Lnk_VerDoc.NavigateUrl = HttpUtility.HtmlDecode(String.Concat(lPathArch, tx_Archivo.Text))
-        'Lnk_VerDoc.NavigateUrl = String.Concat("http://localhost/Produccion/Archivos/", tx_Archivo.Text)
-        ''http://localhost/Produccion/Archivos/OC%20021181268.pdf
         btnGrabar.Enabled = False
         btnEliminar.Enabled = False
         btnActualizar.Enabled = True
@@ -317,6 +313,10 @@ Public Class IngresoOC
             Next
             'Lbl_MsgGrilla.Text = "Detalle de Ordenes de Compra ingresadas para la Obra: " & lTblRes.Rows(0)("Nombre").ToString
         End If
+        'Lnk_VerDoc.NavigateUrl = "../../Produccion/Archivos/" & tx_Archivo.Text
+        Lnk_VerDoc.NavigateUrl = String.Concat(lPathArch, tx_Archivo.Text)
+        'Lnk_VerDoc.NavigateUrl = String.Concat("http://localhost/Produccion/Archivos/", tx_Archivo.Text)
+        ''http://localhost/Produccion/Archivos/OC%20021181268.pdf
     End Sub
 
     Protected Sub btnActualizar_Click(sender As Object, e As EventArgs) Handles btnActualizar.Click

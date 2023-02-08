@@ -276,9 +276,21 @@
     <Content Include="Complementos\icons\weather.jpg" />
     <Content Include="Complementos\icons\zip.png" />
     <Content Include="Complementos\img\14.jpg" />
+    <Content Include="Complementos\img\bosquejo.png" />
+    <Content Include="Complementos\img\configuraciones.png" />
+    <Content Include="Complementos\img\equipo.png" />
+    <Content Include="Complementos\img\factura.png" />
+    <Content Include="Complementos\img\haz.png" />
+    <Content Include="Complementos\img\INET.png" />
     <Content Include="Complementos\img\logo.png" />
     <Content Include="Complementos\img\logoTO.png" />
+    <Content Include="Complementos\img\logout.png" />
     <Content Include="Complementos\img\menu.png" />
+    <Content Include="Complementos\img\proteccion.png" />
+    <Content Include="Complementos\img\reporte.png" />
+    <Content Include="Complementos\img\rrhh.png" />
+    <Content Include="Complementos\img\soporte.png" />
+    <Content Include="Complementos\img\tratar.png" />
     <Content Include="Complementos\img\usuario.png" />
     <Content Include="Complementos\js\config.js" />
     <Content Include="Complementos\js\echart-example.js" />
@@ -480,7 +492,9 @@
     <Content Include="General.aspx" />
     <Content Include="IngresoOC.aspx" />
     <Content Include="IngresoPrecioServicios.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calidad.aspx.designer.vb">
@@ -763,6 +777,7 @@
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
     <Content Include="My Project\DataSources\System.Data.DataSet.datasource" />
+    <None Include="My Project\PublishProfiles\FolderProfile.pubxml" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>

@@ -9,8 +9,7 @@
         Dim lresultado As Boolean
         Dim ldal As New Datos
         Dim lSql As String = ""
-        lSql = String.Concat("select o.Id, SiglaObra,  o.Nombre, EstadoAlta, o.Empresa, o.Dir, Encargado, Telefono,
-        FechaCrea, u.Usuario as usuario from Obras O, to_Usuarios U where EstadoAlta <> 'FIN' and o.empresa = 'TO' and o.UsuarioCrea = u.Id")
+        lSql = String.Concat("SP_Consultas_FichaObra  30 ,'','','','','','','','','',''")
         Try
             Dim lTabla As New Data.DataTable
             lTabla = ldal.CargaTabla(lSql, "L")

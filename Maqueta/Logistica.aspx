@@ -243,6 +243,7 @@
                                     <div class="col-12">
                                         <asp:Panel ID="PanelLOG" runat="server" Visible=" false">
                                             <asp:Button ID="btnGrabar" class="btn btn-primary" runat="server" Text="Grabar" />
+                                            <asp:Button ID="btnAgregarDatos" runat="server" class="btn btn-primary" Text="Ingresar datos despacho" />
                                         </asp:Panel>
                                         <br />
                                         <uc1:Contactos runat="server" ID="Contactos" />
@@ -274,26 +275,22 @@
                             <div class="card-body bg-light">
                                 <asp:GridView ID="gvControlCosto" runat="server" class="table table-striped table-bordered" BorderStyle="None" AutoGenerateColumns="False">
                                     <Columns>
-                                        <asp:BoundField HeaderText="Codigo producto" />
-                                        <asp:BoundField HeaderText="Nombre obra" />
-                                        <asp:BoundField HeaderText="Centro costo" />
-                                        <asp:BoundField HeaderText="Transportista" />
-                                        <asp:BoundField HeaderText="Costo neto ($)" />
-                                        <asp:BoundField HeaderText="Costo sobreestadia ($)" />
-                                        <asp:BoundField HeaderText="Costo flete falso ($)" />
-                                        <asp:BoundField HeaderText="Costo total ($)" />
-                                        <asp:BoundField HeaderText="Sucursal" />
-                                        <asp:BoundField HeaderText="N° factura" />
-                                        <asp:BoundField HeaderText="N° GDE" />
-                                        <asp:BoundField HeaderText="GDE en servidor" />
-                                        <asp:BoundField HeaderText="Fecha GDE" />
-                                        <asp:BoundField HeaderText="Tipo GDE" />
-                                        <asp:BoundField HeaderText="Kilos GDF" />
+                                        <asp:BoundField HeaderText="Transportista" DataField="NombreTransporte" />
+                                        <asp:BoundField HeaderText="Costo neto ($)" DataField="costoNeto" />
+                                        <asp:BoundField HeaderText="Costo sobreestadia ($)" DataField="costosobreestadia" />
+                                        <asp:BoundField HeaderText="Costo flete falso ($)" DataField="costofleteFalso" />
+                                        <asp:BoundField HeaderText="Costo total ($)" DataField="CostoTotalTransporte" />
+                                        <asp:BoundField HeaderText="Sucursal" DataField="Sucursal" />
+                                        <asp:BoundField HeaderText="N° factura" DataField="NroFactura" />
+                                        <asp:BoundField HeaderText="N° GDE" DataField="NroGDE" />
+                                        <asp:BoundField HeaderText="GDE en servidor" DataField="GDE_En_Servidor" />
+                                        <asp:BoundField HeaderText="Fecha GDE" DataField="FechaGDE" />
+                                        <asp:BoundField HeaderText="Tipo GDE" DataField="TipoGuia" />
+                                        <asp:BoundField HeaderText="Kilos GDE" DataField="KgsGDE" />
                                         <asp:BoundField HeaderText="Pago cliente" />
+                                        <asp:BoundField HeaderText="Observacion" />
                                     </Columns>
                                 </asp:GridView>
-                                <br />
-                                <asp:Button ID="btnAgregarDatos" runat="server" class="btn btn-primary" Text="Ingresar datos despacho" />
                             </div>
                         </div>
                     </div>
@@ -454,6 +451,32 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
     <script src="Complementos/vendors/list.js/list.min.js"></script>
     <script src="Complementos/js/theme.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#<%=gvControlCosto.ClientID%>').DataTable({
+                //para cambiar el lenguaje a español
+                order: [[0, 'asc']],
+                "language": {
+                    "lengthMenu": "Mostrar _MENU_ registros",
+                    "zeroRecords": "No se encontraron resultados",
+                    "info": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                    "infoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+                    "infoFiltered": "(filtrado de un total de _MAX_ registros)",
+                    "sSearch": "Buscar:",
+                    "oPaginate": {
+                        "sFirst": "Primero",
+                        "sLast": "Último",
+                        "sNext": "Siguiente",
+                        "sPrevious": "Anterior"
+                    },
+                    "sProcessing": "Procesando...",
+                }
+            });
+        });
+    </script>
 </body>
-
 </html>
+

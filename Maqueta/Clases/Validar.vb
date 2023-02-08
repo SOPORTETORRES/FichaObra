@@ -109,4 +109,24 @@
         Return lres
     End Function
 
+    Public Function ValidaCostoDespacho(neto As String, sobreestadia As String, FleteFalso As String, N_factura As String)
+        Dim lres As String = "OK"
+        If neto = "" Then
+            lres = "neto()"
+        Else
+            If sobreestadia = "" Then
+                lres = "sobreestadia()"
+            Else
+                If FleteFalso = "" Then
+                    lres = "FleteFalso()"
+                Else
+                    If N_factura = "" Then
+                        lres = "N_factura()"
+                    End If
+                End If
+            End If
+        End If
+        Return lres
+    End Function
+
 End Class

@@ -129,6 +129,36 @@ Public Class Datos
         Return lTblRes
     End Function
 
+    Public Function CargaDatosDespacho(IDdespacho As Integer) As DataTable
+        Dim lTblRes As New DataTable, ldal As New Datos, lSql As String = ""
+        lSql = String.Concat("SP_Consultas_FichaObra  26 ,'", IDdespacho, "','','','','','','','','',''")
+        lTblRes = ldal.CargaTabla(lSql, "L")
+        Return lTblRes
+    End Function
+
+    Public Function CargaDatosGDE(IDdespacho As Integer) As DataTable
+        Dim lTblRes As New DataTable, ldal As New Datos, lSql As String = ""
+        lSql = String.Concat("SP_Consultas_FichaObra  27 ,'", IDdespacho, "','','','','','','','','',''")
+        lTblRes = ldal.CargaTabla(lSql, "L")
+        Return lTblRes
+    End Function
+
+    Public Function CargaDatosDespachoGeneral() As DataTable
+        Dim lTblRes As New DataTable, ldal As New Datos, lSql As String = ""
+        lSql = String.Concat("SP_Consultas_FichaObra  29 ,'','','','','','','','','',''")
+        lTblRes = ldal.CargaTabla(lSql, "L")
+        Return lTblRes
+    End Function
+
+    Public Function GrabaDatosDespacho(CostoFleteFalso As Integer, CostoNeto As Integer, Sobreestadia As Integer,
+        IDGDE As String, Nfactura As String, Observacion As String, Usuario As String) As DataTable
+        Dim lTblRes As New DataTable, ldal As New Datos, lSql As String = "", CostoTotal As Integer
+        CostoTotal = CostoNeto + Sobreestadia + CostoFleteFalso
+        lSql = String.Concat("SP_Consultas_FichaObra  28 ,'", CostoFleteFalso, "','", CostoNeto, "','", Sobreestadia, "','", IDGDE, "','", Nfactura, "','", Observacion, "','", Usuario, "','", CostoTotal, "','',''")
+        lTblRes = ldal.CargaTabla(lSql, "L")
+        Return lTblRes
+    End Function
+
 
 
 #End Region
@@ -152,7 +182,7 @@ Public Class Datos
 
         lFila = lTblFinal.NewRow()
 
-        lSql = String.Concat("Exec SP_CRUD_OC_INGRESADAS 0,'',0,'','',", iIdObra, ",0,'',6")
+        lSql = String.Concat("Exec SP_CRUD_OC_INGRESADAS 0,'',0,'','',", iIdObra, ",0,'','',6")
         lTblRes = CargaTabla(lSql, "L")
         If lTblRes.Rows.Count > 0 Then
             lFila("KgsCubicados") = Format(Val(lTblRes.Rows(0)("TotalCubicado").ToString), "#,##0")
@@ -160,13 +190,13 @@ Public Class Datos
             lFila("KgsCubicados") = "0"
         End If
 
-        lSql = String.Concat("Exec SP_CRUD_OC_INGRESADAS 0,'',0,'','',", iIdObra, ",0,'',4")
+        lSql = String.Concat("Exec SP_CRUD_OC_INGRESADAS 0,'',0,'','',", iIdObra, ",0,'','',4")
         lTblRes = CargaTabla(lSql, "L")
         If lTblRes.Rows.Count > 0 Then
             lFila("Total_KgsOC") = Format(Val(lTblRes.Rows(0)(0).ToString), "#,##0")
         End If
 
-        lSql = String.Concat("Exec SP_CRUD_OC_INGRESADAS 0,'',0,'','',", iIdObra, ",0,'',8")
+        lSql = String.Concat("Exec SP_CRUD_OC_INGRESADAS 0,'',0,'','',", iIdObra, ",0,'','',8")
         lTblRes = CargaTabla(lSql, "L")
         If lTblRes.Rows.Count > 0 Then
             lFila("KgsDespachados") = Format(Val(lTblRes.Rows(0)("TotalDespachado").ToString), "#,##0")
@@ -175,7 +205,7 @@ Public Class Datos
             lTotalKgs = Val(lTblRes.Rows(0)("TotalDespachado").ToString) + Val(lTblRes.Rows(0)("TotalET_IMP").ToString)
             lTotalOC = Val(lTblRes.Rows(0)(0).ToString)
 
-            lFila("KgsParaBloqueo") = lTotalKgs
+            lFila("KgsParaBloqueo") = Format(Val(lTotalKgs), "#,##0")
 
             lPorAvance = Math.Round(Val(lTotalKgs) * 100, 2)
 

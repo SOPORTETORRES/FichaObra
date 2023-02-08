@@ -77,6 +77,33 @@ Partial Public Class IngresoDatosDespacho
     Protected WithEvents txtNFactura As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
+    '''Control dpTransportista.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents dpTransportista As Global.System.Web.UI.WebControls.DropDownList
+    
+    '''<summary>
+    '''Control txtObs.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtObs As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''Control btnGrabar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnGrabar As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
     '''Control txtCodigoProducto.
     '''</summary>
     '''<remarks>
@@ -102,15 +129,6 @@ Partial Public Class IngresoDatosDespacho
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents txtCentroCosto As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
-    '''Control txtTransportista.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtTransportista As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
     '''Control txtSucursal.
@@ -149,15 +167,6 @@ Partial Public Class IngresoDatosDespacho
     Protected WithEvents txtPagoCliente As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''Control txtObs.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtObs As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
     '''Control btnVolver.
     '''</summary>
     '''<remarks>
@@ -165,4 +174,13 @@ Partial Public Class IngresoDatosDespacho
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents btnVolver As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''Control gvControlCosto.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents gvControlCosto As Global.System.Web.UI.WebControls.GridView
 End Class

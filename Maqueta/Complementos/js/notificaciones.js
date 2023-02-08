@@ -857,7 +857,7 @@ function CodigosFalse() {
     Swal.fire({
         icon: 'error',
         title: 'Oops...',
-        text: 'Ha ocurrido un imprevisto al intentar registrar los codigos de facturacion',
+        text: 'El codigo que intenta ingresar aun no ha sido registrado en INET',
         showConfirmButton: false,
         timer: 3500
     })
@@ -1009,6 +1009,84 @@ function TiempoDesp() {
     })
 }
 
+function DatoDespachoOK() {
+    Swal.fire({
+        icon: 'success',
+        title: 'Exitoso',
+        text: 'Los datos se han registrado correctamente',
+        showConfirmButton: false
+    })
+}
+
+function DatoDespachoER() {
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Ocurrio un error inesperado y los datos no fueron guardados',
+        showConfirmButton: false,
+        timer: 3500
+    })
+}
+
+function neto() {
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Este campo no puede estar vacio',
+        showConfirmButton: false,
+        timer: 3500
+    })
+}
+
+function neto() {
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'El campo valor Neto no puede estar vacio',
+        showConfirmButton: false,
+        timer: 3500
+    })
+}
+
+function sobreestadia() {
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'El campo valor Sobreestadia no puede estar vacio',
+        showConfirmButton: false,
+        timer: 3500
+    })
+}
+
+function FleteFalso() {
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'El campo valor Flete falso no puede estar vacio',
+        showConfirmButton: false,
+        timer: 3500
+    })
+}
+
+function N_factura() {
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'El campo Nro factura no puede estar vacio',
+        showConfirmButton: false,
+        timer: 3500
+    })
+}
+
+function GDEER() {
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'El N° de GDE que intenta buscar no existe, favor reintente',
+        showConfirmButton: false,
+        timer: 3500
+    })
+}
 
 
 
